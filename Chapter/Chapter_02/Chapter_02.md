@@ -446,14 +446,3 @@ useEffect(() => {
 5. Modern React uses **Hooks instead of class lifecycle methods**.
 
 ---
-
-If you want, I can also create the **next chapter notes**:
-
-**Chapter 3:**
-
-* Event Handling
-* Handling User Input
-* Forms in React Native
-* Controlled vs Uncontrolled Components
-
-(very important for building real apps).
