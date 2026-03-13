@@ -4,8 +4,9 @@
  *
  * @format
  */
-
+import "./global.css"
 import { NewAppScreen } from '@react-native/new-app-screen';
+import CoreComponents from "./Chapter/Chapter_03/Example/CoreComponents"
 import { StatusBar, StyleSheet, Text, useColorScheme, View } from 'react-native';
 import {
   SafeAreaProvider,
@@ -18,7 +19,8 @@ function App() {
   return (
     <SafeAreaProvider>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <AppContent />
+      <CoreComponents/>
+      {/* <AppContent /> */}
     </SafeAreaProvider>
   );
 }
