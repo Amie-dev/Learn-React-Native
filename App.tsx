@@ -6,7 +6,17 @@
  */
 import "./global.css"
 import { NewAppScreen } from '@react-native/new-app-screen';
+// components
 import CoreComponents from "./Chapter/Chapter_03/Example/CoreComponents"
+import AdvancedCoreComponents from "./Chapter/Chapter_03/Example/Adv_Components"
+
+// style
+import InlineStyles from './Chapter/Chapter_04/Example/InlineStyles'
+import StyleSheetStyles from './Chapter/Chapter_04/Example/StylesheetSytes'
+import StyledComponents from './Chapter/Chapter_04/Example/StyledComponent'
+import NativeWind from './Chapter/Chapter_04/Example/NativewindDemo'
+
+
 import { StatusBar, StyleSheet, Text, useColorScheme, View } from 'react-native';
 import {
   SafeAreaProvider,
@@ -19,7 +29,18 @@ function App() {
   return (
     <SafeAreaProvider>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <CoreComponents/>
+
+
+      {/* Style */}
+      {/* <InlineStyles/> */}
+      {/* <StyleSheetStyles/> */}
+      {/* <StyledComponents/> */}
+      <NativeWind/>
+
+      {/* core Component */}
+      {/* <CoreComponents/> */}
+      {/* <AdvancedCoreComponents/> */}
+
       {/* <AppContent /> */}
     </SafeAreaProvider>
   );
