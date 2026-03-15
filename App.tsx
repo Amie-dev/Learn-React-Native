@@ -19,6 +19,14 @@ import NativeWind from './Chapter/Chapter_04/Example/NativewindDemo';
 //Event Handling
 import Main from './Chapter/Chapter_05/Example/Main';
 
+//flexbox and properties
+import FlexBoxDemo from "./Chapter/Chapter_06/Example/FlexBoxDemo"
+import UI from './Chapter/Chapter_06/Example/UI'
+import {Project} from './Chapter/Chapter_06/Example/Project/Project'
+
+
+
+
 import {
   StatusBar,
   StyleSheet,
@@ -49,7 +57,12 @@ function App() {
       {/* <AdvancedCoreComponents/> */}
 
       {/* Handle event */}
-      <Main />
+      {/* <Main /> */}
+
+      {/* flex  and UI*/}
+      {/* <FlexBoxDemo/> */}
+      {/* <UI/> */}
+      <Project/>
       {/* <AppContent /> */}
     </SafeAreaProvider>
   );
