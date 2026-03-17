@@ -1,4 +1,3 @@
-Alright — let’s turn this into a **well-structured, deep, and professional Chapter 7.1** (like proper notes you can study or revise from). I’ll expand concepts, add clarity, flow, and practical understanding.
 
 ---
 
