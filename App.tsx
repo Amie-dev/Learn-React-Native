@@ -22,8 +22,14 @@ import Main from './Chapter/Chapter_05/Example/Main';
 //flexbox and properties
 import FlexBoxDemo from "./Chapter/Chapter_06/Example/FlexBoxDemo"
 import UI from './Chapter/Chapter_06/Example/UI'
-import {Project} from './Chapter/Chapter_06/Example/Project/Project'
+// Project
+import {Project} from './Project/Project01/Project'
 
+import App00  from './Project/Project00/Project'
+
+// Navagations
+
+import {StackDemo} from "./Chapter/Chapter_07/StackNavigation/StackDemo"
 
 
 
@@ -62,7 +68,13 @@ function App() {
       {/* flex  and UI*/}
       {/* <FlexBoxDemo/> */}
       {/* <UI/> */}
-      <Project/>
+
+      {/* Project */}
+      {/* <Project/> */}
+      {/* <App00/> */}
+
+      {/* Navigations */}
+      <StackDemo/>
       {/* <AppContent /> */}
     </SafeAreaProvider>
   );
