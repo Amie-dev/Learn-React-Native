@@ -1,14 +1,13 @@
 import { Text, View } from "react-native"
-import {BottomTabNavigator} from "../../BottomTab/BottomTabNavigator"
+
+
 
 export const Home=()=>{
   return(
     <View>
       <Text>
-        Hello Home
+        Home Screen
       </Text>
-
-      {/* <BottomTabNavigator/> */}
     </View>
   )
 }

@@ -25,12 +25,14 @@ import UI from './Chapter/Chapter_06/Example/UI'
 // Project
 import {Project} from './Project/Project01/Project'
 
-import App00  from './Project/Project00/Project'
+import {App00}  from './Project/Project00/App00'
 
 // Navagations
 
 import {StackDemo} from "./Chapter/Chapter_07/StackNavigation/StackDemo"
+import {DrawerNavigator} from './Chapter/Chapter_07/DrawerNavigation/DrawerNavigator'
 
+import {BottomTabNavigator} from './Chapter/Chapter_07/BottomTab/BottomTabNavigator'
 
 
 import {
@@ -73,8 +75,14 @@ function App() {
       {/* <Project/> */}
       {/* <App00/> */}
 
-      {/* Navigations */}
-      <StackDemo/>
+      {/* Navigations all*/}
+      {/* <StackDemo/> */}
+      
+      {/* <DrawerNavigator/> */}
+      <BottomTabNavigator/>
+
+
+
       {/* <AppContent /> */}
     </SafeAreaProvider>
   );
