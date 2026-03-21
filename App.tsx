@@ -73,13 +73,13 @@ function App() {
 
       {/* Project */}
       {/* <Project/> */}
-      {/* <App00/> */}
+      <App00/>
 
       {/* Navigations all*/}
       {/* <StackDemo/> */}
       
       {/* <DrawerNavigator/> */}
-      <BottomTabNavigator/>
+      {/* <BottomTabNavigator/> */}
 
 
 
