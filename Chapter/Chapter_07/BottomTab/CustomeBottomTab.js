@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity } from "react-native";
 
 export const CustomBottomTab = (props) => {
-  const { state, descriptors, navigation } = props;
+  const { state, descriptors, navigation, } = props;
 
   return (
     <View
