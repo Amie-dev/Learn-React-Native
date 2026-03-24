@@ -1,4 +1,3 @@
-Perfect — let’s go **next-level deep** on `useEffect` in React Native. This will cover **mental models, internals, edge cases, patterns, and interview depth** 👇
 
 ---
 
@@ -443,11 +442,3 @@ After mastering `useEffect`:
 👉 Custom Hooks (real power 💥)
 
 ---
-
-If you want next:
-
-✅ I can build **real API project using useEffect (React Native)**
-✅ Show **10 tricky bugs developers make**
-✅ Teach **useEffect vs useLayoutEffect deeply with diagrams**
-
-Just tell me 👍
