@@ -9,7 +9,7 @@ import { NewAppScreen } from '@react-native/new-app-screen';
 // components
 import CoreComponents from './Chapter/Chapter_03/Example/CoreComponents';
 import AdvancedCoreComponents from './Chapter/Chapter_03/Example/Adv_Components';
-
+//Chapter
 // style
 import InlineStyles from './Chapter/Chapter_04/Example/InlineStyles';
 import StyleSheetStyles from './Chapter/Chapter_04/Example/StylesheetSytes';
@@ -22,10 +22,17 @@ import Main from './Chapter/Chapter_05/Example/Main';
 //flexbox and properties
 import FlexBoxDemo from "./Chapter/Chapter_06/Example/FlexBoxDemo"
 import UI from './Chapter/Chapter_06/Example/UI'
+
+// Chapter 08
+import {UseEffectScreen} from './Chapter/Chapter_08/02_useEffect/Test'
+
+
 // Project
 import {Project} from './Project/Project01/Project'
 
 import {App00}  from './Project/Project00/App00'
+
+import {App02} from "./Project/Project02/App02"
 
 // Navagations
 
@@ -54,6 +61,8 @@ function App() {
     <SafeAreaProvider>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
 
+      {/* Chapter */}
+
       {/* Style */}
       {/* <InlineStyles/> */}
       {/* <StyleSheetStyles/> */}
@@ -71,9 +80,15 @@ function App() {
       {/* <FlexBoxDemo/> */}
       {/* <UI/> */}
 
+      {/* Chapter 08 */}
+      <UseEffectScreen/>
+
+
       {/* Project */}
+
       {/* <Project/> */}
-      <App00/>
+      {/* <App00/> */}
+      {/* <App02/> */}
 
       {/* Navigations all*/}
       {/* <StackDemo/> */}
