@@ -20,27 +20,31 @@ import NativeWind from './Chapter/Chapter_04/Example/NativewindDemo';
 import Main from './Chapter/Chapter_05/Example/Main';
 
 //flexbox and properties
-import FlexBoxDemo from "./Chapter/Chapter_06/Example/FlexBoxDemo"
-import UI from './Chapter/Chapter_06/Example/UI'
+import FlexBoxDemo from './Chapter/Chapter_06/Example/FlexBoxDemo';
+import UI from './Chapter/Chapter_06/Example/UI';
 
 // Chapter 08
-import {UseEffectScreen} from './Chapter/Chapter_08/02_useEffect/Test'
+import { UseEffectScreen } from './Chapter/Chapter_08/02_useEffect/Test';
+import { UseRefHookScreen } from './Chapter/Chapter_08/03_useRef/UseRef';
+import { UseContextHookScreen } from './Chapter/Chapter_08/04_useContext/useContextApp00/useContext';
+import { AppScreen } from './Chapter/Chapter_08/04_useContext/useContextApp00/App';
+import {AppUseContext01} from "./Chapter/Chapter_08/04_useContext/useContextApp01/App"
+
 
 
 // Project
-import {Project} from './Project/Project01/Project'
+import { Project } from './Project/Project01/Project';
 
-import {App00}  from './Project/Project00/App00'
+import { App00 } from './Project/Project00/App00';
 
-import {App02} from "./Project/Project02/App02"
+import { App02 } from './Project/Project02/App02';
 
 // Navagations
 
-import {StackDemo} from "./Chapter/Chapter_07/StackNavigation/StackDemo"
-import {DrawerNavigator} from './Chapter/Chapter_07/DrawerNavigation/DrawerNavigator'
+import { StackDemo } from './Chapter/Chapter_07/StackNavigation/StackDemo';
+import { DrawerNavigator } from './Chapter/Chapter_07/DrawerNavigation/DrawerNavigator';
 
-import {BottomTabNavigator} from './Chapter/Chapter_07/BottomTab/BottomTabNavigator'
-
+import { BottomTabNavigator } from './Chapter/Chapter_07/BottomTab/BottomTabNavigator';
 
 import {
   StatusBar,
@@ -81,8 +85,11 @@ function App() {
       {/* <UI/> */}
 
       {/* Chapter 08 */}
-      <UseEffectScreen/>
-
+      {/* <UseEffectScreen/> */}
+      {/* <UseRefHookScreen /> */}
+      {/* <UseContextHookScreen /> */}
+      {/* <AppScreen /> */}
+      <AppUseContext01/>
 
       {/* Project */}
 
@@ -92,11 +99,9 @@ function App() {
 
       {/* Navigations all*/}
       {/* <StackDemo/> */}
-      
+
       {/* <DrawerNavigator/> */}
       {/* <BottomTabNavigator/> */}
-
-
 
       {/* <AppContent /> */}
     </SafeAreaProvider>
