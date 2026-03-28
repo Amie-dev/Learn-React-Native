@@ -46,23 +46,22 @@ const reducer = (state, action) => {
 };
 
 export const LearnUseReducer = () => {
-
   const inputRef = useRef();
   const [todoInput, setTodoInput] = useState('');
   // const [toggleTheme, settoggleTheme] = useState(second)
   const [state, dispatch] = useReducer(reducer, initialState);
   const isLight = state.toggleTheme;
-  const theme = isLight ? COLORS.light : COLORS.dark;
+  let theme = isLight ? COLORS.light : COLORS.dark;
   console.log(state.todo);
-
 
   return (
     <View
-      style={{ margin: 0, backgroundColor: theme.background, height: '100%' }}
+      style={{ margin: 0, backgroundColor: theme.background, flex:1 }}
     >
       <View
         style={{
           padding: 10,
+          flex:1
         }}
       >
         <View
@@ -87,7 +86,7 @@ export const LearnUseReducer = () => {
               color: theme.text,
             }}
           >
-            Theme : {isLight ? 'LIGHT' : 'Drak'}
+            Theme : {isLight ? 'LIGHT' : 'DARK'}
           </Text>
         </View>
         <View>
@@ -191,6 +190,7 @@ export const LearnUseReducer = () => {
               backgroundColor: theme.inputBackground,
               borderColor: theme.inputBorder,
               marginTop: 10,
+              borderWidth:1,
               color: theme.text,
               paddingVertical: 10,
               paddingHorizontal: 15,
@@ -202,7 +202,7 @@ export const LearnUseReducer = () => {
             onChangeText={setTodoInput}
             placeholderTextColor={theme.placeholder}
           />
-          
+
           <View
             style={{
               display: 'flex',
@@ -214,7 +214,10 @@ export const LearnUseReducer = () => {
           >
             <TouchableOpacity
               style={{
-                backgroundColor: todoInput.trim() === '' ? theme.buttonDisabled : theme.primary,
+                backgroundColor:
+                  todoInput.trim() === ''
+                    ? theme.buttonDisabled
+                    : theme.primary,
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -223,18 +226,17 @@ export const LearnUseReducer = () => {
                 borderRadius: 10,
                 borderBlockColor: theme.border,
               }}
-              disabled={todoInput.trim()===''}
+              disabled={todoInput.trim() === ''}
               onPress={() => {
-              
                 dispatch({ type: 'ADD_TODO', payload: todoInput });
                 setTodoInput('');
               }}
             >
-              <Text>Add Todo</Text>
+              <Text style={{color:theme.buttonText,fontWeight:'bold'}}>Add Todo</Text>
             </TouchableOpacity>
           </View>
         </View>
-        <View>
+        <View style={{flex:1}}>
           <Text
             style={{
               color: theme.text,
@@ -254,8 +256,13 @@ export const LearnUseReducer = () => {
             </Text>
           )}
 
-          <FlatList
+          <View style={{flex:1}}>
+            <FlatList
             data={state.todo}
+            style={{flex:1}}
+            // showsHorizontalScrollIndicator={false}
+            showsVerticalScrollIndicator={false}
+            contentContainerStyle={{paddingBottom:10}}
             keyExtractor={(item, index) => index.toString()}
             renderItem={({ item, index }) => (
               <View
@@ -264,24 +271,41 @@ export const LearnUseReducer = () => {
                   justifyContent: 'space-between',
                   marginTop: 10,
                   backgroundColor: theme.card,
-                  padding: 10,
+                  // paddingVertical: 155,
                   borderRadius: 8,
+                  // paddingVertical: 10,
+                  paddingHorizontal: 15,
                 }}
               >
-                <Text style={{ color: theme.text }}>{item}</Text>
+                <Text style={{ color: theme.text, alignSelf: 'center' ,fontSize:20}}>
+                  {item}
+                </Text>
 
                 <TouchableOpacity
                   onPress={() =>
                     dispatch({ type: 'REMOVE_TODO', payload: index })
                   }
                 >
-                  <Text style={{ color: theme.danger, fontWeight: 'bold' }}>
+                  <Text
+                    style={{
+                      color: theme.danger,
+                      fontWeight: 'bold',
+                      backgroundColor: theme.border,
+                      paddingHorizontal: 15,
+                      paddingVertical: 5,
+                      borderColor: theme.buttonText,
+                      borderRadius: 10,
+                      shadowColor: theme.shadow,
+                      fontSize:20
+                    }}
+                  >
                     ✕
                   </Text>
                 </TouchableOpacity>
               </View>
             )}
           />
+          </View>
         </View>
       </View>
     </View>
