@@ -30,6 +30,8 @@ import { UseContextHookScreen } from './Chapter/Chapter_08/04_useContext/useCont
 import { AppScreen } from './Chapter/Chapter_08/04_useContext/useContextApp00/App';
 import {AppUseContext01} from "./Chapter/Chapter_08/04_useContext/useContextApp01/App"
 import {UseCallBackScreen02} from "./Chapter/Chapter_08/05_useCallback/useCallBack02"
+import {UseReducerScreen} from "./Chapter/Chapter_08/07_useReducer/useReducerScreen"
+import {LearnUseReducer} from "./Chapter/Chapter_08/07_useReducer/lernUseReducer"
 
 
 
@@ -91,7 +93,9 @@ function App() {
       {/* <UseContextHookScreen /> */}
       {/* <AppScreen /> */}
       {/* <AppUseContext01/> */}
-      <UseCallBackScreen02/>
+      {/* <UseCallBackScreen02/> */}
+      {/* <UseReducerScreen/> */}
+      <LearnUseReducer/>
 
       {/* Project */}
 

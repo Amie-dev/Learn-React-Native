@@ -1,17 +1,17 @@
-import React, { useReducer } from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import React, { useReducer } from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
 
 const initialState = { count: 0 };
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case "INC":
+    case 'INC':
       return { count: state.count + 1 };
 
-    case "DEC":
+    case 'DEC':
       return { count: state.count - 1 };
 
-    case "RESET":
+    case 'RESET':
       return initialState;
 
     default:
@@ -26,15 +26,15 @@ export const UseReducerScreen = () => {
     <View>
       <Text>Count: {state.count}</Text>
 
-      <TouchableOpacity onPress={() => dispatch({ type: "INC" })}>
+      <TouchableOpacity onPress={() => dispatch({ type: 'INC' })}>
         <Text>Increase</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={() => dispatch({ type: "DEC" })}>
+      <TouchableOpacity onPress={() => dispatch({ type: 'DEC' })}>
         <Text>Decrease</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={() => dispatch({ type: "RESET" })}>
+      <TouchableOpacity onPress={() => dispatch({ type: 'RESET' })}>
         <Text>Reset</Text>
       </TouchableOpacity>
     </View>

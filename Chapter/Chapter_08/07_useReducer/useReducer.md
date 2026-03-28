@@ -1,8 +1,5 @@
-
 ---
-
 # 📘 React Native Hook – `useReducer` (Deep Dive)
-
 ---
 
 # 🔹 1. What is `useReducer`?
@@ -10,7 +7,9 @@
 `useReducer` is a Hook in React that:
 
 ✅ Manages **complex state logic**
+
 ✅ Uses a **reducer function (like Redux)**
+
 ✅ Handles **multiple related state updates**
 
 ---
@@ -33,9 +32,9 @@ When state becomes complex:
 
 ```js
 const [user, setUser] = useState({
-  name: "",
+  name: '',
   age: 0,
-  isLoggedIn: false
+  isLoggedIn: false,
 });
 ```
 
@@ -78,7 +77,7 @@ const [state, dispatch] = useReducer(reducer, initialState);
 
 ```js
 const initialState = {
-  count: 0
+  count: 0,
 };
 ```
 
@@ -89,13 +88,13 @@ const initialState = {
 ```js
 const reducer = (state, action) => {
   switch (action.type) {
-    case "INCREMENT":
+    case 'INCREMENT':
       return { count: state.count + 1 };
 
-    case "DECREMENT":
+    case 'DECREMENT':
       return { count: state.count - 1 };
 
-    case "RESET":
+    case 'RESET':
       return initialState;
 
     default:
@@ -125,9 +124,9 @@ const [state, dispatch] = useReducer(reducer, initialState);
 # 🔹 Step 4: Dispatch Actions
 
 ```js
-dispatch({ type: "INCREMENT" });
-dispatch({ type: "DECREMENT" });
-dispatch({ type: "RESET" });
+dispatch({ type: 'INCREMENT' });
+dispatch({ type: 'DECREMENT' });
+dispatch({ type: 'RESET' });
 ```
 
 ---
@@ -135,20 +134,20 @@ dispatch({ type: "RESET" });
 # 🔥 4. Complete Example (React Native)
 
 ```js
-import React, { useReducer } from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import React, { useReducer } from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
 
 const initialState = { count: 0 };
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case "INC":
+    case 'INC':
       return { count: state.count + 1 };
 
-    case "DEC":
+    case 'DEC':
       return { count: state.count - 1 };
 
-    case "RESET":
+    case 'RESET':
       return initialState;
 
     default:
@@ -163,15 +162,15 @@ export const UseReducerScreen = () => {
     <View>
       <Text>Count: {state.count}</Text>
 
-      <TouchableOpacity onPress={() => dispatch({ type: "INC" })}>
+      <TouchableOpacity onPress={() => dispatch({ type: 'INC' })}>
         <Text>Increase</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={() => dispatch({ type: "DEC" })}>
+      <TouchableOpacity onPress={() => dispatch({ type: 'DEC' })}>
         <Text>Decrease</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={() => dispatch({ type: "RESET" })}>
+      <TouchableOpacity onPress={() => dispatch({ type: 'RESET' })}>
         <Text>Reset</Text>
       </TouchableOpacity>
     </View>
@@ -199,8 +198,8 @@ React updates UI
 
 ```js
 dispatch({
-  type: "INCREMENT",
-  payload: 5
+  type: 'INCREMENT',
+  payload: 5,
 });
 ```
 
@@ -219,9 +218,9 @@ case "ADD":
 
 | Feature          | useState | useReducer |
 | ---------------- | -------- | ---------- |
-| Simple state     | ✅        | ❌          |
-| Complex logic    | ❌        | ✅          |
-| Multiple updates | ❌        | ✅          |
+| Simple state     | ✅       | ❌         |
+| Complex logic    | ❌       | ✅         |
+| Multiple updates | ❌       | ✅         |
 | Readability      | Medium   | High       |
 
 ---
@@ -232,10 +231,10 @@ case "ADD":
 
 ## 📱 Use when:
 
-* Form handling
-* Authentication logic
-* Complex UI states
-* Multiple related state updates
+- Form handling
+- Authentication logic
+- Complex UI states
+- Multiple related state updates
 
 ---
 
@@ -274,16 +273,16 @@ return { count: state.count + 1 };
 
 ```js
 const initialState = {
-  name: "",
-  age: 0
+  name: '',
+  age: 0,
 };
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case "SET_NAME":
+    case 'SET_NAME':
       return { ...state, name: action.payload };
 
-    case "SET_AGE":
+    case 'SET_AGE':
       return { ...state, age: action.payload };
 
     default:
@@ -332,9 +331,9 @@ useReducer = mini Redux inside component
 
 # ⚡ 13. Performance Insight
 
-* Cleaner logic
-* Easier debugging
-* Scalable architecture
+- Cleaner logic
+- Easier debugging
+- Scalable architecture
 
 ---
 
@@ -357,9 +356,9 @@ Dispatch = trigger action
 
 # 🎯 Final Summary
 
-* `useReducer` manages complex state
-* Uses reducer + dispatch pattern
-* Better than useState for large logic
-* Similar to Redux
+- `useReducer` manages complex state
+- Uses reducer + dispatch pattern
+- Better than useState for large logic
+- Similar to Redux
 
 ---
