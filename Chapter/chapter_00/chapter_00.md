@@ -1,0 +1,1 @@
+every thing of react native folder structer
